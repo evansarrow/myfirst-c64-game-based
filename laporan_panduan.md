@@ -41,14 +41,14 @@ Game ini menggunakan **5 level progresif** dengan tingkat kesulitan yang meningk
 
 | Level | Delay (D) | Kecepatan | Warna Border | Timer (TM) |
 |-------|-----------|-----------|--------------|------------|
-| 1     | 80        | Paling Lambat | Hitam (0) | 400 |
-| 2     | 62        | Lambat    | Biru (6)     | 600 |
-| 3     | 44        | Sedang    | Ungu (4)     | 800 |
-| 4     | 26        | Cepat     | Merah (2)    | 1000 |
-| 5     | 8         | Paling Cepat | Oranye (8) | 1200 |
+| 1     | 80        | Paling Lambat | Hitam (0) | 150 |
+| 2     | 62        | Lambat    | Biru (6)     | 250 |
+| 3     | 44        | Sedang    | Ungu (4)     | 350 |
+| 4     | 26        | Cepat     | Merah (2)    | 450 |
+| 5     | 8         | Paling Cepat | Oranye (8) | 550 |
 
 **Rumus Kecepatan:** `D = 80 - (LV-1) * 18`
-**Rumus Timer:** `TM = 400 + (LV-1) * 200` (dikalibrasi agar ~20 detik per level)
+**Rumus Timer:** `TM = 150 + (LV-1) * 100` (dikalibrasi agar ~20 detik per level)
 
 Setiap level dimulai dengan layar pengumuman PETSCII box-art yang menampilkan nomor level dan kecepatan, disertai efek suara fanfare SID. Ketika timer `TM` mencapai nol, pemain naik level dengan animasi flash border dan arpeggio kemenangan.
 
@@ -280,7 +280,7 @@ Untuk mempermudah perekaman video Anda, berikut adalah pembagian segmen waktu da
 1. **00:00 - 02:00 | Pembukaan & Konsep:** Perkenalan diri, menjelaskan tujuan tugas, konsep game arcade retro, arsitektur memori C64, dan **sistem 5 level progresif** yang digunakan.
 2. **02:00 - 06:00 | Uji Coba Gameplay (Demo 5 Level):** Menunjukkan cara membuka emulator, melakukan *drag & drop* file `space_dodge.prg`, lalu mendemonstrasikan permainan secara langsung. **Pastikan menunjukkan minimal 2-3 transisi level** agar terlihat peningkatan kecepatan meteor dan perubahan warna border.
 3. **06:00 - 10:00 | Bedah Kode Sumber (Source Code Walkthrough):** Membuka kode `.bas` di editor teks modern, menjelaskan baris-baris krusial:
-   - **Baris 148-149:** Rumus kecepatan (`D=80-(LV-1)*18`) dan timer (`TM=400+(LV-1)*200`)
+   - **Baris 148-149:** Rumus kecepatan (`D=80-(LV-1)*18`) dan timer (`TM=150+(LV-1)*100`)
    - **Baris 153-157:** Sistem warna border per level
    - **Baris 500-550:** Transisi naik level (flash, fanfare, pengumuman)
    - **Baris 570-640:** Layar kemenangan setelah Level 5
